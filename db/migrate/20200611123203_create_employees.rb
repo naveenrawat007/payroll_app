@@ -8,6 +8,7 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.string :account_no
       t.string :pan_no
       t.string :pf_no
+      t.string :payment_by
       t.references :company
       t.timestamps
     end
