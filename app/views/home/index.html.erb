@@ -1,0 +1,6 @@
+<h1>Company Payroll System</h1>
+
+<%= form_tag import_data_path, multipart: true do %>
+  <%= file_field_tag :file, id: "payroll-file"%>
+  <%= submit_tag "Upload" %>
+<% end %>

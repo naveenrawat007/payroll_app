@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  timeout: 5000
+development:
+  <<: *default
+  username: postgres
+  password: naveen123
+  database: payroll
+test:
+  <<: *default
+  username: postgres
+  password: naveen123
+  database: payroll_test
+production:
+  <<: *default
+  username: postgres
+  password: naveen123
+  database: payroll_prod
