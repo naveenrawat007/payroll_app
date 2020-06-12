@@ -1,0 +1,34 @@
+<h2>COMPLITECH SOLUTIONS PRIVATE LIMITED</h2>
+<h3>Parul Nagar Society, Ahmedabad, Gujarat - 380061
+CIN:U72900GJ2007PTC051398</h3>
+
+<h4>Payslip for the Month of <%=payslip.payrol.month%>, <%=payslip.created_at.year%></h4>
+
+<div class="container">
+  <div class="left">
+    <p><b>Employee ID</b> : <%=payslip.employee.emp_id%><p><br>
+    <p><b>Name</b> : <%=payslip.employee.name%></p><br>
+    <p><b>Designation</b> : <%=payslip.employee.designation%></p><br>
+    <p><b>Department</b> : <%=payslip.employee.department%></p><br>
+    <p><b>Effective Working Day</b> : <%=payslip.working_days%></p><br>
+    <p><b>Account No</b> : <%=payslip.employee.name%></p><br>
+    <p><b>Pan No</b> : <%=payslip.employee.designation%></p><br>
+    <p><b>PF No</b> : <%=payslip.employee.department%></p><br>
+  </div>
+
+  <div class="salary">
+    <p><b>Basic</b> : <%=payslip.basic%></p> <br>
+    <p><b>PF</b> : <%=payslip.pf%></p><br>
+    <p><b>HRA</b> : <%=payslip.hra%></p><br>
+    <p><b>Incentives</b> : <%=payslip.incentives%></p><br>
+    <p><b>Pf_deduction</b> : <%=payslip.pf_deduction%></p><br>
+    <p><b>Esi_deduction</b> : <%=payslip.esi_deduction%></p><br>
+    <p><b>Tds_deduction</b> : <%=payslip.tds_deduction%></p><br>
+    <p><b>TOTAL EARNING</b> : <%=payslip.total_earning%></p><br>
+    <p><b>TOTAL DEDUCTION</b> : <%=payslip.total_deduction%></p><br>
+  </div>
+</div>
+
+<div class="total">
+  <p><b>Net Pay for the Month :  <%=payslip.total_paid_amount%></b></p>
+</div>

@@ -1,0 +1,33 @@
+<h2>Employee Payroll</h2>
+<table id="payroll_table" class="table">
+  <tr >
+    <th>Sr_No</th>
+    <th>Emp_ID</th>
+    <th>Name</th>
+    <th>Designation</th>
+    <th>Department</th>
+    <th>Payroll Month</th>
+    <th>Total Earning</th>
+    <th>Deducted Amount</th>
+    <th>Pay Amount</th>
+    <th>Click to Choose</th>
+  </tr>
+
+  <%@salary_details.each do |salary_detail|%>
+     <td><%= salary_detail.id %></td>
+     <td><%= salary_detail.employee.emp_id %></td>
+     <td><%= salary_detail.employee.name %></td>
+     <td><%= salary_detail.employee.designation %></td>
+     <td><%= salary_detail.employee.department %></td>
+     <td><%= salary_detail.payrol.month %></td>
+     <td><%= salary_detail.total_earning %></td>
+     <td><%= salary_detail.total_deduction %></td>
+     <td><%= salary_detail.total_paid_amount %></td>
+     <td>
+       <%= link_to "Download PaySlip","/download_slip/#{salary_detail.id}", class: "download_slip"%>
+       <%= link_to "Email PaySlip" ,"",class: "mail_slip" %>
+     </td>
+   </tr>
+  <%end%>
+
+</table>
