@@ -6,7 +6,7 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+# gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -70,9 +70,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'jquery-rails'
-gem "roo"
-gem 'pdfkit'
-gem 'render_anywhere'
-gem "sidekiq", '5.2.1'
-gem 'redis'
+# gem 'jquery-rails'
+# gem "roo"
+# gem 'pdfkit'
+# gem 'render_anywhere'
+# gem "sidekiq", '5.2.1'
+# gem 'redis'
