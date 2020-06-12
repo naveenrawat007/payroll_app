@@ -24,8 +24,8 @@
      <td><%= salary_detail.total_deduction %></td>
      <td><%= salary_detail.total_paid_amount %></td>
      <td>
-       <%= link_to "Download PaySlip","/download_slip/#{salary_detail.id}", class: "download_slip"%>
-       <%= link_to "Email PaySlip" ,"",class: "mail_slip" %>
+       <%= link_to "Download PaySlip","/download_slip/#{salary_detail.id}", class: "download_slip", method: :post%>
+       <%= link_to "Email PaySlip" ,"/mail_pay_slip/#{salary_detail.id}",class: "mail_slip", method: :post %>
      </td>
    </tr>
   <%end%>

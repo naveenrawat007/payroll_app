@@ -21,8 +21,11 @@ class PayrolController < ApplicationController
   end
 
   def download_slip
-    # @salary_detail = SalaryDetail.includes(:employee).includes(:payrol).find_by(id: params[:id])
     download_pdf
+  end
+
+  def mail_payslip
+    Sidekiq::Client.enqueue_to_in("default",Time.now, SendPayslipWorker,params[:id])
   end
 
   private
