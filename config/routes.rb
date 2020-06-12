@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root "home#index"
-  post '/import_data' => "home#excel_data"
+  root "payrol#index"
+  post '/import_data' => "payrol#generate_data"
+  get '/show' => 'payrol#show'
 end
