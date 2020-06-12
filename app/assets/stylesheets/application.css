@@ -37,8 +37,37 @@
   color: white
 }
 
-h2 {
+h2,h4,h3,h2,h5 {
   margin-top: 10px;
   margin-bottom: 40px;
   text-align: center;
+}
+.left{
+  border: 2px solid black;
+  width: 200px;
+  padding: 15px;
+  height: 300px;
+  left: 1%;
+}
+.left p {
+  margin: 0px;
+}
+.salary{
+  position: absolute;
+  border: 2px solid black;
+  width: 250px;
+  height: 320px;
+  right: 2%;
+  top: 31%;
+  padding: 15px;
+}
+.salary p {
+  margin: 0px;
+}
+.total{
+  margin-top: 90px;
+  margin-left: 150px;
+}
+.total p {
+  font-size: 25px;
 }
