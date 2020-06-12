@@ -2,7 +2,8 @@ class PayslipMailer < ApplicationMailer
 
   def payslip_send(id)
     payslip = SalaryDetail.includes(:employee).includes(:payrol).find_by(id: id)
-    email = "naveenrawat808@gmail.com"
+    @name = payslip.employee.name
+    email = "nik@complitech.us"
     kit = PDFKit.new(as_html(payslip), page_size: 'A4')
     attachments['payslip.pdf'] = File.read(kit.to_file("#{Rails.root}/public/payslip.pdf"))
     mail(to:email, subject: "Pay Slip")
