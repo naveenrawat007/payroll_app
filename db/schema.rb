@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_06_11_125812) do
     t.string "account_no"
     t.string "pan_no"
     t.string "pf_no"
+    t.string "payment_by"
     t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

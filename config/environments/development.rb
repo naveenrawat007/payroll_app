@@ -53,8 +53,8 @@ Rails.application.configure do
    domain: "example.com",
    authentication: "plain",
    enable_starttls_auto: true,
-   user_name: "*******" ,
-   password: "*****"
+   user_name: "rawatnaveennr123@gmail.com" ,
+   password: "naveen@28"
   }
 
   # Debug mode disables concatenation and preprocessing of assets.

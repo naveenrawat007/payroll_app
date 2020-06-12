@@ -50,6 +50,16 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+  gem 'jquery-rails'
+  gem "roo"
+  gem 'pdfkit'
+  gem 'render_anywhere'
+  gem "sidekiq", '5.2.1'
+  gem 'redis'
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
