@@ -64,3 +64,5 @@ gem 'jquery-rails'
 gem "roo"
 gem 'pdfkit'
 gem 'render_anywhere'
+gem "sidekiq", '5.2.1'
+gem 'redis'
