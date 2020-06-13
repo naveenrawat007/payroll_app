@@ -1,3 +1,12 @@
+<% if flash[:success] %>
+ <div class = "alert alert-success flash-alert">
+   <%= flash[:success] %>
+ </div>
+<% elsif flash[:danger]%>
+ <div class = "alert alert-danger flash-alert" >
+   <%= flash[:danger] %>
+ </div>
+<% end %>
 <h1>Company Payroll System</h1>
 <h2>Please upload excel sheet</h2>
 

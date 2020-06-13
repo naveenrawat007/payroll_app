@@ -5,10 +5,15 @@ class PayrolController < ApplicationController
   end
 
   def generate_data
-    sheet = Roo::Excelx.new(params[:file].path)
-    SaveExcelData.new(sheet).call
-    redirect_to show_path
-    flash[:success] = "Nice Your Excel Sheet data is saved Sucessfully !!"
+    begin
+      sheet = Roo::Excelx.new(params[:file].path)
+      SaveExcelData.new(sheet).call
+      redirect_to show_path
+      flash[:success] = "Nice Your Excel Sheet data is saved Sucessfully !!"
+    rescue Exception => e
+      redirect_to root_path
+      flash[:danger] = "Please Upload Excelx file"
+    end
   end
 
   def show
