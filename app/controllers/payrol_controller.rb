@@ -8,6 +8,7 @@ class PayrolController < ApplicationController
     sheet = Roo::Excelx.new(params[:file].path)
     SaveExcelData.new(sheet).call
     redirect_to show_path
+    flash[:success] = "Nice Your Excel Sheet data is saved Sucessfully !!"
   end
 
   def show
@@ -19,7 +20,10 @@ class PayrolController < ApplicationController
   end
 
   def mail_payslip
-    Sidekiq::Client.enqueue_to_in("default",Time.now, SendPayslipWorker,params[:id])
+    # Sidekiq::Client.enqueue_to_in("default",Time.now, SendPayslipWorker,params[:id])
+    PayslipMailer.payslip_send(params[:id]).deliver_now
+    redirect_to show_path
+    flash[:success] = "Pay Slip send to your email. Thank You !!"
   end
 
   private

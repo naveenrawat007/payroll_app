@@ -1,2 +1,11 @@
+<% if flash[:success] %>
+ <div class = "alert alert-success flash-alert">
+   <%= flash[:success] %>
+ </div>
+<% elsif flash[:danger]%>
+ <div class = "alert alert-danger flash-alert" >
+   <%= flash[:danger] %>
+ </div>
+<% end %>
 <h2>Employee Payroll</h2>
 <%= render 'payrol_list'%>
