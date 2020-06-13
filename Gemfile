@@ -58,6 +58,7 @@ group :production do
   gem 'render_anywhere'
   gem "sidekiq", '5.2.1'
   gem 'redis'
+  gem 'wkhtmltopdf-binary', '0.12.3'
 end
 
 group :test do
