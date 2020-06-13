@@ -26,9 +26,14 @@ class PayrolController < ApplicationController
 
   def mail_payslip
     # Sidekiq::Client.enqueue_to_in("default",Time.now, SendPayslipWorker,params[:id])
-    PayslipMailer.payslip_send(params[:id]).deliver_now
-    redirect_to show_path
-    flash[:success] = "Pay Slip send to your email. Thank You !!"
+    begin
+      PayslipMailer.payslip_send(params[:id]).deliver_now
+      redirect_to show_path
+      flash[:success] = "Pay Slip send to your email. Thank You !!"
+    rescue Exception => e
+      redirect_to show_path
+      flash[:danger] = "Plese try again..!"
+    end
   end
 
   private
