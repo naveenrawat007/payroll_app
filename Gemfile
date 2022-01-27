@@ -56,7 +56,7 @@ group :production do
   gem "roo"
   gem 'pdfkit'
   gem 'render_anywhere'
-  gem "sidekiq", '5.2.1'
+  gem "sidekiq", '6.4.0'
   gem 'redis'
   gem 'wkhtmltopdf-binary', '0.12.3'
 end
